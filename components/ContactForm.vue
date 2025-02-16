@@ -145,12 +145,12 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
          replyTo: event.data.email,
          subject: `Nouveau message de ${event.data.firstName} ${event.data.lastName}`,
          text: `Nom: ${event.data.firstName} ${event.data.lastName}
-         Email: ${event.data.email}
-         Entreprise: ${event.data.company || "Non précisé"}
-         Téléphone: ${event.data.tel || "Non précisé"}
-         
-         Message:
-         ${event.data.message}`,
+Email: ${event.data.email}
+Entreprise: ${event.data.company || "Non précisé"}
+Téléphone: ${event.data.tel || "Non précisé"}
+
+Message:
+${event.data.message}`,
       });
 
       toast.add({
