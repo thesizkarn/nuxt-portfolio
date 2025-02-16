@@ -69,13 +69,6 @@
                      </UFormGroup>
 
                      <UButton type="submit" :loading="loading">Envoyer</UButton>
-
-                     <UAlert v-if="success" type="success">
-                        Message envoyé avec succès !
-                     </UAlert>
-                     <UAlert v-if="error" type="error">
-                        {{ error }}
-                     </UAlert>
                   </UForm>
                </div>
                <div class="flex min-w-0 flex-1 flex-col items-start gap-6">
@@ -113,6 +106,7 @@ import { z } from "zod";
 import type { FormSubmitEvent } from "#ui/types";
 
 const mail = useMail();
+const toast = useToast();
 
 const formState = reactive({
    firstName: "",
@@ -141,13 +135,9 @@ type Schema = z.infer<typeof schema>;
 const form = ref();
 
 const loading = ref(false);
-const success = ref(false);
-const error = ref<string | null>(null);
 
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
    loading.value = true;
-   success.value = false;
-   error.value = null;
 
    try {
       await mail.send({
@@ -155,15 +145,21 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
          replyTo: event.data.email,
          subject: `Nouveau message de ${event.data.firstName} ${event.data.lastName}`,
          text: `Nom: ${event.data.firstName} ${event.data.lastName}
-Email: ${event.data.email}
-Entreprise: ${event.data.company || "Non précisé"}
-Téléphone: ${event.data.tel || "Non précisé"}
-
-Message:
-${event.data.message}`,
+         Email: ${event.data.email}
+         Entreprise: ${event.data.company || "Non précisé"}
+         Téléphone: ${event.data.tel || "Non précisé"}
+         
+         Message:
+         ${event.data.message}`,
       });
 
-      success.value = true;
+      toast.add({
+         title: "Succès",
+         description: "Votre message a été envoyé avec succès.",
+         color: "green",
+         timeout: 5000,
+      });
+
       Object.assign(formState, {
          firstName: "",
          lastName: "",
@@ -173,8 +169,14 @@ ${event.data.message}`,
          message: "",
       });
    } catch (err) {
-      error.value = "Erreur lors de l'envoi du message.";
       console.error(err);
+
+      toast.add({
+         title: "Erreur",
+         description: "Une erreur est survenue lors de l'envoi du message.",
+         color: "red",
+         timeout: 5000,
+      });
    } finally {
       loading.value = false;
    }
