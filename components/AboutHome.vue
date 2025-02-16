@@ -52,7 +52,7 @@
                   projet web et obtenir un devis gratuit et détaillé.
                </p>
                <UButton
-                  to="/#contact"
+                  to="/contact"
                   size="lg"
                   icon="i-heroicons-pencil-square"
                >
