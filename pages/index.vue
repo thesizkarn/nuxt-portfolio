@@ -23,6 +23,7 @@
             </UButton>
          </div>
       </section>
+      <SkillsHome />
       <ContactForm />
    </div>
 </template>
