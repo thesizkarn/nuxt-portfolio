@@ -17,32 +17,44 @@
                   class="grid select-none grid-cols-3 gap-12 text-center md:gap-16"
                >
                   <div class="flex justify-center">
-                     <UIcon name="i-cib-html5" class="size-16" title="HTML5" />
+                     <UIcon
+                        name="i-cib-html5"
+                        class="size-12 md:size-16"
+                        title="HTML5"
+                     />
                   </div>
                   <div class="flex justify-center">
                      <UIcon
                         name="i-cib-css3-shiled"
-                        class="size-16"
+                        class="size-12 md:size-16"
                         title="CSS3"
                      />
                   </div>
                   <div class="flex justify-center">
                      <UIcon
                         name="i-cib-typescript"
-                        class="size-16"
+                        class="size-12 md:size-16"
                         title="TypeScript"
                      />
                   </div>
                   <div class="flex justify-center">
-                     <UIcon name="i-cib-react" class="size-16" title="React" />
+                     <UIcon
+                        name="i-cib-react"
+                        class="size-12 md:size-16"
+                        title="React"
+                     />
                   </div>
                   <div class="flex justify-center">
-                     <UIcon name="i-cib-vue-js" class="size-16" title="Vue" />
+                     <UIcon
+                        name="i-cib-vue-js"
+                        class="size-12 md:size-16"
+                        title="Vue"
+                     />
                   </div>
                   <div class="flex justify-center">
                      <UIcon
                         name="i-cib-wordpress"
-                        class="size-16"
+                        class="size-12 md:size-16"
                         title="WordPress"
                      />
                   </div>
