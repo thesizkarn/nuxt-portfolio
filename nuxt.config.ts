@@ -7,6 +7,7 @@ export default defineNuxtConfig({
       "nuxt-svgo",
       "@nuxt/eslint",
       "@nuxt/image",
+      "@nuxtjs/robots",
       [
          "nuxt-mail",
          {
