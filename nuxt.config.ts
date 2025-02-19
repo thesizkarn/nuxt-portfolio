@@ -8,6 +8,7 @@ export default defineNuxtConfig({
       "@nuxt/eslint",
       "@nuxt/image",
       "@nuxtjs/robots",
+      "nuxt-schema-org",
       [
          "nuxt-mail",
          {
