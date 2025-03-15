@@ -13,30 +13,15 @@
                      class: 'object-cover size-full rounded-lg',
                   }"
                />
-               <!-- <picture>
-                  <source
-                     srcset="
-                        /allain-web-developpeur-freelance-blois-1168x1000.jpg
-                     "
-                     media="(min-width: 1024px)"
-                  />
-                  <img
-                     src="/allain-web-developpeur-freelance-blois-584x500.jpg"
-                     alt="Julien Allain - Développeur web"
-                     class="w-full rounded-lg object-cover shadow-lg"
-                     width="584"
-                     height="500"
-                  />
-               </picture> -->
             </div>
 
             <div class="flex min-w-0 flex-1 flex-col items-start gap-6">
                <span class="uppercase text-primary">À Propos</span>
                <h2 class="text-xl font-semibold md:text-3xl lg:text-5xl">
                   Julien Allain,<br />
-                  <strong class="font-semibold text-primary"
-                     >Développeur web</strong
-                  >
+                  <strong class="font-semibold text-primary">
+                     Développeur web
+                  </strong>
                   freelance à Blois
                </h2>
                <p>
