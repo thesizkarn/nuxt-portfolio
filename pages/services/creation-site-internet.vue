@@ -256,6 +256,166 @@ const faqItems = ref([
          "Un freelance optimise votre site avec une structure technique solide (vitesse, mobile-friendly), des mots-clés pertinents et un contenu de qualité, tout en respectant les bonnes pratiques SEO. Résultat : une meilleure position sur Google et plus de visiteurs qualifiés.",
    },
 ]);
+
+useSeoMeta({
+   title: "Création de Site Internet à Blois - Développeur Web Freelance",
+   description:
+      "Création de sites internet à Blois par un développeur web freelance : sites vitrines, e-commerce avec WordPress et WooCommerce, solutions sur mesure optimisées pour le SEO.",
+   ogTitle: "Création de Site Internet à Blois - Allain Web",
+   ogDescription:
+      "Besoin d’un site vitrine ou e-commerce ? Julien Allain, développeur web freelance à Blois, vous propose des solutions personnalisées avec WordPress ou sur mesure.",
+   ogImage: "https://www.allainweb.fr/illustration-developpeur-web.svg",
+   ogUrl: "https://www.allainweb.fr/services/creation-site-internet",
+   twitterCard: "summary_large_image",
+   twitterTitle: "Création de Site Internet à Blois - Allain Web",
+   twitterDescription:
+      "Sites vitrines, e-commerce ou sur mesure par un développeur freelance à Blois. Contactez-moi pour votre projet web !",
+   twitterImage: "https://www.allainweb.fr/illustration-developpeur-web.svg",
+});
+
+useSchemaOrg([
+   {
+      "@type": "Service",
+      "@id": "https://www.allainweb.fr/services/creation-site-internet/#service",
+      "serviceType": "Création de site internet",
+      "provider": {
+         "@type": "Organization",
+         "@id": "https://www.allainweb.fr/#organization",
+         "name": "Allain Web",
+         "url": "https://www.allainweb.fr",
+         "logo": "https://www.allainweb.fr/logo.png",
+         "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "7 Résidence de Bellevue",
+            "addressLocality": "Seigy",
+            "postalCode": "41110",
+            "addressCountry": "FR",
+         },
+         "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@allainweb.fr",
+            "telephone": "+33 6 50 42 52 21",
+            "contactType": "Customer Service",
+            "availableLanguage": ["French"],
+         },
+      },
+      "areaServed": {
+         "@type": "Place",
+         "name": "Blois",
+      },
+      "description":
+         "Création de sites internet à Blois : sites vitrines, e-commerce avec WordPress et WooCommerce, et solutions sur mesure optimisées pour le référencement.",
+      "offers": {
+         "@type": "Offer",
+         "name": "Création de site vitrine et e-commerce",
+         "description":
+            "Sites vitrines modernes ou boutiques en ligne avec WordPress et WooCommerce, adaptés à vos besoins.",
+         "priceCurrency": "EUR",
+         "availability": "https://schema.org/InStock",
+      },
+   },
+   {
+      "@type": "WebPage",
+      "@id": "https://www.allainweb.fr/services/creation-site-internet/#webpage",
+      "url": "https://www.allainweb.fr/services/creation-site-internet",
+      "name": "Création de Site Internet - Allain Web",
+      "isPartOf": {
+         "@id": "https://www.allainweb.fr/#website",
+      },
+      "description":
+         "Découvrez mes services de création de sites internet à Blois : vitrines, e-commerce avec WordPress, et solutions sur mesure.",
+      "breadcrumb": {
+         "@type": "BreadcrumbList",
+         "itemListElement": [
+            {
+               "@type": "ListItem",
+               "position": 1,
+               "name": "Accueil",
+               "item": "https://www.allainweb.fr/",
+            },
+            {
+               "@type": "ListItem",
+               "position": 2,
+               "name": "Services",
+               "item": "https://www.allainweb.fr/services",
+            },
+            {
+               "@type": "ListItem",
+               "position": 3,
+               "name": "Création de Site Internet",
+               "item":
+                  "https://www.allainweb.fr/services/creation-site-internet",
+            },
+         ],
+      },
+   },
+   {
+      "@type": "FAQPage",
+      "@id": "https://www.allainweb.fr/services/creation-site-internet/#faqpage",
+      "mainEntity": [
+         {
+            "@type": "Question",
+            "name":
+               "Pourquoi choisir un développeur web freelance pour la création de mon site internet ?",
+            "acceptedAnswer": {
+               "@type": "Answer",
+               "text":
+                  "Un développeur web freelance offre une approche personnalisée, adaptée à vos besoins spécifiques, sans les frais élevés d’une agence. Vous bénéficiez d’un interlocuteur unique, réactif et flexible, qui met son expertise au service d’un site unique, optimisé pour vos objectifs et votre visibilité sur Google.",
+            },
+         },
+         {
+            "@type": "Question",
+            "name":
+               "Quels sont les avantages d’un site internet sur mesure par rapport à une solution préfabriquée comme Wix ?",
+            "acceptedAnswer": {
+               "@type": "Answer",
+               "text":
+                  "Un site sur mesure offre une personnalisation totale, adaptée à vos besoins et à votre identité, contrairement aux modèles limités de Wix. Il est plus performant, évolutif et optimisé pour le référencement sur Google, garantissant une meilleure visibilité et une expérience utilisateur unique.",
+            },
+         },
+         {
+            "@type": "Question",
+            "name":
+               "Quelle est la différence entre un site préfabriqué Wix et un site WordPress créé par un freelance ?",
+            "acceptedAnswer": {
+               "@type": "Answer",
+               "text":
+                  "Un site Wix est limité par des templates rigides et des options restreintes, tandis qu’un site WordPress, offre une personnalisation avancée, une flexibilité illimitée et une optimisation SEO poussée.",
+            },
+         },
+         {
+            "@type": "Question",
+            "name":
+               "Que choisir entre un site sur mesure et un site WordPress ?",
+            "acceptedAnswer": {
+               "@type": "Answer",
+               "text":
+                  "Un site entièrement sur mesure est idéal pour des besoins très spécifiques, mais plus coûteux et long à développer. Un site WordPress, combine personnalisation, rapidité de mise en œuvre et flexibilité grâce à des thèmes et plugins adaptés, tout en restant optimisé pour le SEO et évolutif selon vos objectifs.",
+            },
+         },
+         {
+            "@type": "Question",
+            "name":
+               "Combien de temps faut-il pour créer un site internet avec un développeur web freelance ?",
+            "acceptedAnswer": {
+               "@type": "Answer",
+               "text":
+                  "Le délai varie selon la complexité du projet, mais en général, un site vitrine prend entre 2 et 4 semaines, et un site plus complexe comme une boutique en ligne peut nécessiter 6 à 8 semaines. Tout dépend de vos besoins, que je définis avec vous pour respecter vos échéances.",
+            },
+         },
+         {
+            "@type": "Question",
+            "name":
+               "Comment un développeur web freelance peut-il améliorer le référencement de mon site sur Google ?",
+            "acceptedAnswer": {
+               "@type": "Answer",
+               "text":
+                  "Un freelance optimise votre site avec une structure technique solide (vitesse, mobile-friendly), des mots-clés pertinents et un contenu de qualité, tout en respectant les bonnes pratiques SEO. Résultat : une meilleure position sur Google et plus de visiteurs qualifiés.",
+            },
+         },
+      ],
+   },
+]);
 </script>
 
 <style></style>
