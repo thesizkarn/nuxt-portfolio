@@ -184,6 +184,27 @@
             </div>
          </UContainer>
       </section>
+
+      <section id="faq" class="relative py-4 md:py-12">
+         <UContainer>
+            <UCard>
+               <template #header>
+                  <h2 class="text-lg font-semibold md:text-xl lg:text-2xl">
+                     FAQ
+                  </h2>
+               </template>
+               <UAccordion
+                  :items="faqItems"
+                  :ui="{
+                     trigger: 'text-base',
+                     body: 'text-base text-neutral-400',
+                  }"
+               />
+            </UCard>
+         </UContainer>
+      </section>
+
+      <ContactForm />
    </div>
 </template>
 
@@ -200,6 +221,39 @@ const links = ref([
    {
       label: "Création de site Internet",
       to: "/services/creation-site-internet",
+   },
+]);
+
+const faqItems = ref([
+   {
+      label: "Pourquoi choisir un développeur web freelance pour la création de mon site internet ?",
+      content:
+         "Un développeur web freelance offre une approche personnalisée, adaptée à vos besoins spécifiques, sans les frais élevés d’une agence. Vous bénéficiez d’un interlocuteur unique, réactif et flexible, qui met son expertise au service d’un site unique, optimisé pour vos objectifs et votre visibilité sur Google.",
+   },
+   {
+      label: "Quels sont les avantages d’un site internet sur mesure par rapport à une solution préfabriquée comme Wix ?",
+      content:
+         "Un site sur mesure offre une personnalisation totale, adaptée à vos besoins et à votre identité, contrairement aux modèles limités de Wix. Il est plus performant, évolutif et optimisé pour le référencement sur Google, garantissant une meilleure visibilité et une expérience utilisateur unique.",
+   },
+   {
+      label: "Quelle est la différence entre un site préfabriqué Wix et un site WordPress créé par un freelance ?",
+      content:
+         "Un site Wix est limité par des templates rigides et des options restreintes, tandis qu’un site WordPress, offre une personnalisation avancée, une flexibilité illimitée et une optimisation SEO poussée.",
+   },
+   {
+      label: "Que choisir entre un site sur mesure et un site WordPress ?",
+      content:
+         "Un site entièrement sur mesure est idéal pour des besoins très spécifiques, mais plus coûteux et long à développer. Un site WordPress, combine personnalisation, rapidité de mise en œuvre et flexibilité grâce à des thèmes et plugins adaptés, tout en restant optimisé pour le SEO et évolutif selon vos objectifs.",
+   },
+   {
+      label: "Combien de temps faut-il pour créer un site internet avec un développeur web freelance ?",
+      content:
+         "Le délai varie selon la complexité du projet, mais en général, un site vitrine prend entre 2 et 4 semaines, et un site plus complexe comme une boutique en ligne peut nécessiter 6 à 8 semaines. Tout dépend de vos besoins, que je définis avec vous pour respecter vos échéances.",
+   },
+   {
+      label: "Comment un développeur web freelance peut-il améliorer le référencement de mon site sur Google ?",
+      content:
+         "Un freelance optimise votre site avec une structure technique solide (vitesse, mobile-friendly), des mots-clés pertinents et un contenu de qualité, tout en respectant les bonnes pratiques SEO. Résultat : une meilleure position sur Google et plus de visiteurs qualifiés.",
    },
 ]);
 </script>

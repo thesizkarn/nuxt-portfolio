@@ -1,5 +1,5 @@
 <template>
-   <section id="contact" class="relative py-12 md:py-24">
+   <section id="contact" class="relative py-4 md:py-12">
       <UContainer>
          <div class="flex flex-col gap-12">
             <div class="flex flex-col justify-center gap-4 md:items-center">
