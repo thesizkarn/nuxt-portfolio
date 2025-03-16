@@ -14,7 +14,7 @@
                   }"
                />
                <div
-                  class="grid select-none grid-cols-3 gap-12 text-center md:gap-16"
+                  class="grid grid-cols-3 gap-12 text-center select-none md:gap-16"
                >
                   <div class="flex justify-center">
                      <UIcon
@@ -62,10 +62,10 @@
             </div>
 
             <div class="flex min-w-0 flex-1 flex-col items-start gap-6">
-               <span class="uppercase text-primary">Depuis 2018</span>
+               <span class="text-(--ui-primary) uppercase">Depuis 2018</span>
                <h2 class="text-xl font-semibold md:text-3xl lg:text-5xl">
                   Compétences en
-                  <strong class="font-semibold text-primary">
+                  <strong class="font-semibold text-(--ui-primary)">
                      développement web
                   </strong>
                </h2>
@@ -87,41 +87,44 @@
                </p>
 
                <div class="flex w-full flex-col gap-4">
-                  <UMeter
-                     label="HTML / CSS"
-                     :value="100"
-                     :ui="{ label: { color: 'text-muted-foreground' } }"
-                  />
-                  <UMeter
-                     label="JavaScript / TypeScript"
-                     :value="100"
-                     :ui="{ label: { color: 'text-muted-foreground' } }"
-                  />
-                  <UMeter
-                     label="React / Next.js"
-                     :value="95"
-                     :ui="{ label: { color: 'text-muted-foreground' } }"
-                  />
-                  <UMeter
-                     label="Vue / Nuxt"
-                     :value="85"
-                     :ui="{ label: { color: 'text-muted-foreground' } }"
-                  />
-                  <UMeter
-                     label="WordPress"
-                     :value="80"
-                     :ui="{ label: { color: 'text-muted-foreground' } }"
-                  />
-                  <UMeter
-                     label="Node.js"
-                     :value="80"
-                     :ui="{ label: { color: 'text-muted-foreground' } }"
-                  />
-                  <UMeter
-                     label="PHP / Symfony"
-                     :value="65"
-                     :ui="{ label: { color: 'text-muted-foreground' } }"
-                  />
+                  <div>
+                     <span class="text-sm text-neutral-400">HTML / CSS</span>
+                     <UProgress v-model="html" />
+                  </div>
+
+                  <div>
+                     <span class="text-sm text-neutral-400">
+                        JavaScript / TypeScript
+                     </span>
+                     <UProgress v-model="js" />
+                  </div>
+
+                  <div>
+                     <span class="text-sm text-neutral-400">
+                        React / Next.js
+                     </span>
+                     <UProgress v-model="react" />
+                  </div>
+
+                  <div>
+                     <span class="text-sm text-neutral-400">Vue / Nuxt</span>
+                     <UProgress v-model="vue" />
+                  </div>
+
+                  <div>
+                     <span class="text-sm text-neutral-400">WordPress</span>
+                     <UProgress v-model="wordpress" />
+                  </div>
+
+                  <div>
+                     <span class="text-sm text-neutral-400">Node.js</span>
+                     <UProgress v-model="node" />
+                  </div>
+
+                  <div>
+                     <span class="text-sm text-neutral-400">PHP / Symfony</span>
+                     <UProgress v-model="php" />
+                  </div>
                </div>
             </div>
          </div>
@@ -129,6 +132,14 @@
    </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const html = ref(100);
+const js = ref(100);
+const react = ref(95);
+const vue = ref(85);
+const wordpress = ref(80);
+const node = ref(80);
+const php = ref(65);
+</script>
 
 <style></style>

@@ -1,17 +1,16 @@
 <template>
-   <div class="relative min-h-screen">
-      <SpeedInsights />
-      <Analytics />
-      <MouseMoveEffect />
-      <BackgroundEffect />
+   <UApp>
+      <div class="relative min-h-screen">
+         <SpeedInsights />
+         <Analytics />
+         <MouseMoveEffect />
+         <BackgroundEffect />
 
-      <NuxtLayout>
-         <NuxtPage />
-      </NuxtLayout>
-
-      <UNotifications />
-      <UModals />
-   </div>
+         <NuxtLayout>
+            <NuxtPage />
+         </NuxtLayout>
+      </div>
+   </UApp>
 </template>
 
 <script setup lang="ts">

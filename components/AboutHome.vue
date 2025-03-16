@@ -16,10 +16,10 @@
             </div>
 
             <div class="flex min-w-0 flex-1 flex-col items-start gap-6">
-               <span class="uppercase text-primary">À Propos</span>
+               <span class="text-(--ui-primary) uppercase">À Propos</span>
                <h2 class="text-xl font-semibold md:text-3xl lg:text-5xl">
                   Julien Allain,<br />
-                  <strong class="font-semibold text-primary">
+                  <strong class="font-semibold text-(--ui-primary)">
                      Développeur web
                   </strong>
                   freelance à Blois

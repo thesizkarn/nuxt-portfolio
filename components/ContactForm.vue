@@ -3,7 +3,7 @@
       <UContainer>
          <div class="flex flex-col gap-12">
             <div class="flex flex-col justify-center gap-4 md:items-center">
-               <span class="uppercase text-primary">
+               <span class="text-(--ui-primary) uppercase">
                   Contacter développeur web Freelance
                </span>
                <h2 class="text-xl font-semibold md:text-3xl lg:text-5xl">
@@ -14,7 +14,9 @@
                class="flex w-full flex-col items-start gap-8 md:flex-row md:gap-12"
             >
                <div class="w-full flex-1">
-                  <h3 class="mb-8 uppercase text-primary">Dites-moi tout</h3>
+                  <h3 class="mb-8 text-(--ui-primary) uppercase">
+                     Dites-moi tout
+                  </h3>
                   <UForm
                      ref="form"
                      class="space-y-8"
@@ -23,56 +25,64 @@
                      @submit="onSubmit"
                   >
                      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                        <UFormGroup label="Prénom" name="firstName" required>
+                        <UFormField label="Prénom" name="firstName" required>
                            <UInput
                               v-model="formState.firstName"
                               placeholder="Votre prénom"
+                              :ui="{ root: 'w-full' }"
                            />
-                        </UFormGroup>
+                        </UFormField>
 
-                        <UFormGroup label="Nom" name="lastName" required>
+                        <UFormField label="Nom" name="lastName" required>
                            <UInput
                               v-model="formState.lastName"
                               placeholder="Votre nom"
+                              :ui="{ root: 'w-full' }"
                            />
-                        </UFormGroup>
+                        </UFormField>
                      </div>
 
-                     <UFormGroup label="Entreprise (optionnel)" name="company">
+                     <UFormField label="Entreprise (optionnel)" name="company">
                         <UInput
                            v-model="formState.company"
                            placeholder="Votre entreprise"
+                           :ui="{ root: 'w-full' }"
                         />
-                     </UFormGroup>
+                     </UFormField>
 
-                     <UFormGroup label="Email" name="email" required>
+                     <UFormField label="Email" name="email" required>
                         <UInput
                            v-model="formState.email"
                            type="email"
                            placeholder="Votre email"
+                           :ui="{ root: 'w-full' }"
                         />
-                     </UFormGroup>
+                     </UFormField>
 
-                     <UFormGroup label="Téléphone" name="tel" required>
+                     <UFormField label="Téléphone" name="tel" required>
                         <UInput
                            v-model="formState.tel"
                            type="tel"
                            placeholder="Votre numéro de téléphone"
+                           :ui="{ root: 'w-full' }"
                         />
-                     </UFormGroup>
+                     </UFormField>
 
-                     <UFormGroup label="Message" name="message" required>
+                     <UFormField label="Message" name="message" required>
                         <UTextarea
                            v-model="formState.message"
                            placeholder="Votre message"
+                           :ui="{ root: 'w-full' }"
                         />
-                     </UFormGroup>
+                     </UFormField>
 
                      <UButton type="submit" :loading="loading">Envoyer</UButton>
                   </UForm>
                </div>
                <div class="flex min-w-0 flex-1 flex-col items-start gap-6">
-                  <span class="uppercase text-primary">Informations</span>
+                  <span class="text-(--ui-primary) uppercase"
+                     >Informations</span
+                  >
                   <h3 class="text-md font-semibold lg:text-lg">
                      Vous pouvez me contacter avec le formulaire ci-présent ou
                      avec les informations suivantes :
@@ -81,7 +91,7 @@
                   <p>
                      <a
                         href="mailto:contact@allainweb.fr"
-                        class="hover:text-primary hover:underline"
+                        class="hover:text-(--ui-primary) hover:underline"
                      >
                         contact@allainweb.fr
                      </a>
@@ -89,7 +99,7 @@
                   <p>
                      <a
                         href="tel:+33650425221"
-                        class="hover:text-primary hover:underline"
+                        class="hover:text-(--ui-primary) hover:underline"
                      >
                         +33 6 50 42 52 21
                      </a>
@@ -156,8 +166,8 @@ ${event.data.message}`,
       toast.add({
          title: "Succès",
          description: "Votre message a été envoyé avec succès.",
-         color: "green",
-         timeout: 5000,
+         color: "primary",
+         duration: 5000,
       });
 
       Object.assign(formState, {
@@ -174,8 +184,8 @@ ${event.data.message}`,
       toast.add({
          title: "Erreur",
          description: "Une erreur est survenue lors de l'envoi du message.",
-         color: "red",
-         timeout: 5000,
+         color: "error",
+         duration: 5000,
       });
    } finally {
       loading.value = false;

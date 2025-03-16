@@ -3,17 +3,19 @@
       <header
          class="flex flex-col items-center justify-center gap-4 py-4 md:py-8"
       >
-         <span class="uppercase text-primary">
+         <span class="text-(--ui-primary) uppercase">
             Concrétisez votre projet web
          </span>
          <h1 class="text-xl font-semibold md:text-3xl lg:text-5xl">
             Création de
-            <strong class="font-semibold text-primary">Site Internet</strong> à
-            Blois
+            <strong class="font-semibold text-(--ui-primary)"
+               >Site Internet</strong
+            >
+            à Blois
          </h1>
          <UBreadcrumb
-            :links="links"
-            :ui="{ li: 'md:text-sm md:gap-x-1.5 gap-x-1 text-xs' }"
+            :items="links"
+            :ui="{ list: 'md:text-sm md:gap-x-1.5 gap-x-1 text-xs' }"
          />
       </header>
       <section class="relative py-8 md:py-24">
@@ -35,7 +37,7 @@
                <div class="flex min-w-0 flex-1 flex-col items-start gap-6">
                   <h2 class="text-lg font-semibold md:text-2xl lg:text-3xl">
                      La création de
-                     <strong class="font-semibold text-primary"
+                     <strong class="font-semibold text-(--ui-primary)"
                         >site internet
                      </strong>
                      : un outil essentiel pour votre visibilité
@@ -74,7 +76,7 @@
       <section class="relative pt-4 md:pt-12">
          <UContainer>
             <div class="flex w-full flex-col items-center justify-center gap-4">
-               <span class="uppercase text-primary">
+               <span class="text-(--ui-primary) uppercase">
                   Un site à votre image
                </span>
                <h2
@@ -94,7 +96,7 @@
                <div class="flex min-w-0 flex-1 flex-col items-start gap-6">
                   <h3 class="text-lg font-semibold md:text-2xl lg:text-3xl">
                      Création de
-                     <strong class="font-semibold text-primary">
+                     <strong class="font-semibold text-(--ui-primary)">
                         site vitrine
                      </strong>
                      : votre carte de visite en ligne
@@ -147,15 +149,15 @@
                <div class="flex min-w-0 flex-1 flex-col items-start gap-6">
                   <h3 class="text-lg font-semibold md:text-2xl lg:text-3xl">
                      Création de
-                     <strong class="font-semibold text-primary">
+                     <strong class="font-semibold text-(--ui-primary)">
                         site e-commerce
                      </strong>
                      avec
-                     <strong class="font-semibold text-primary">
+                     <strong class="font-semibold text-(--ui-primary)">
                         WordPress
                      </strong>
                      et
-                     <strong class="font-semibold text-primary">
+                     <strong class="font-semibold text-(--ui-primary)">
                         WooCommerce
                      </strong>
                   </h3>
@@ -186,7 +188,7 @@
 </template>
 
 <script lang="ts" setup>
-const links = [
+const links = ref([
    {
       label: "Accueil",
       to: "/",
@@ -199,7 +201,7 @@ const links = [
       label: "Création de site Internet",
       to: "/services/creation-site-internet",
    },
-];
+]);
 </script>
 
 <style></style>
