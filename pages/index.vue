@@ -18,7 +18,7 @@
             </h2>
          </UContainer>
          <div class="mt-12 flex justify-center">
-            <UButton icon="i-heroicons-pencil-square" to="/#contact" size="xl">
+            <UButton icon="i-heroicons-pencil-square" to="#contact" size="xl">
                Contactez-moi
             </UButton>
          </div>
