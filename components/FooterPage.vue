@@ -1,5 +1,5 @@
 <template>
-   <footer class="relative bg-gray-900 text-white">
+   <footer class="relative bg-(--ui-bg) text-(--ui-text-muted)">
       <UContainer>
          <div
             class="grid grid-cols-1 gap-8 pt-8 md:grid-cols-2 md:pt-12 lg:grid-cols-4"
@@ -16,7 +16,7 @@
                   <SvgoPicto class="size-6" :font-controlled="false" />
                   <SvgoLogo class="w-[130px]" :font-controlled="false" />
                </ULink>
-               <p class="text-sm text-gray-400">
+               <p class="text-sm">
                   Julien Allain, développeur web freelance à Blois. Création de
                   sites internet, e-commerce et web design responsive pour votre
                   succès en ligne.
@@ -109,11 +109,11 @@
                <h3 class="mb-4 text-lg font-semibold text-(--ui-primary)">
                   Contact
                </h3>
-               <address class="text-sm text-gray-400 not-italic">
+               <address class="text-sm not-italic">
                   7 Résidence de Bellevue<br />
                   41110 Seigy, France
                </address>
-               <p class="mt-2 text-sm text-gray-400">
+               <p class="mt-2 text-sm">
                   <a
                      href="mailto:contact@allainweb.fr"
                      class="transition-colors hover:text-(--ui-primary)"
@@ -121,7 +121,7 @@
                      contact@allainweb.fr
                   </a>
                </p>
-               <p class="mt-2 text-sm text-gray-400">
+               <p class="mt-2 text-sm">
                   <a
                      href="tel:+33650425221"
                      class="transition-colors hover:text-(--ui-primary)"
@@ -159,9 +159,7 @@
          </div>
 
          <!-- Copyright -->
-         <div
-            class="mt-12 border-t border-gray-800 py-6 text-center text-sm text-gray-400"
-         >
+         <div class="mt-12 border-t border-gray-700 py-6 text-center text-sm">
             &copy; {{ currentYear }} Allain Web. Tous droits réservés.
          </div>
       </UContainer>
