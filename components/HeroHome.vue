@@ -16,7 +16,7 @@
             web sur CMS ou personnalisé.
          </p>
          <div class="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-3">
-            <UButton to="/#" size="lg">En savoir plus</UButton>
+            <UButton to="/services" size="lg">En savoir plus</UButton>
             <UButton to="/#" size="lg" color="neutral"
                >Voir mes projets
             </UButton>

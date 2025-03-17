@@ -32,9 +32,15 @@
                >
                   <ULink
                      :to="item.href"
-                     active-class="text-(--ui-primary)"
-                     inactive-class="hover:text-(--ui-primary)"
-                     class="flex items-center gap-1 text-sm/6 font-semibold hover:text-(--ui-primary)"
+                     :class="{
+                        'text-(--ui-primary)': item.child.some(
+                           (child) => $route.path === child.href,
+                        ),
+                        'hover:text-(--ui-primary)': !item.child.some(
+                           (child) => $route.path === child.href,
+                        ),
+                     }"
+                     class="flex items-center gap-1 text-sm/6 font-semibold"
                   >
                      {{ item.name }}
                      <UIcon
