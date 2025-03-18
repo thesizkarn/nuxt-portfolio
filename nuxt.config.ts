@@ -25,6 +25,7 @@ export default defineNuxtConfig({
             },
          },
       ],
+      "@nuxtjs/sitemap",
    ],
    compatibilityDate: "2025-01-31",
    css: ["~/assets/css/global.css"],

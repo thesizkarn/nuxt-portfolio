@@ -161,6 +161,12 @@
          <!-- Copyright -->
          <div class="mt-12 border-t border-gray-700 py-6 text-center text-sm">
             &copy; {{ currentYear }} Allain Web. Tous droits réservés.
+            <ULink
+               to="/mentions-legales"
+               class="text-(--ui-text-muted) hover:text-(--ui-primary)"
+            >
+               Mentions Légales
+            </ULink>
          </div>
       </UContainer>
    </footer>
