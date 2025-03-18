@@ -38,7 +38,15 @@
                               Hébergement
                            </UBadge>
                         </div>
-                        <UButton to="/#" block>Voir le projet</UButton>
+                        <UButton
+                           to="https://edas-renovation.fr/"
+                           target="_blank"
+                           rel="noopener"
+                           block
+                           aria-label="Voir le projet E.D.A.S sur un site externe"
+                        >
+                           Voir le projet
+                        </UButton>
                      </div>
                   </div>
                </UCard>
