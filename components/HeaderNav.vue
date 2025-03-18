@@ -289,7 +289,7 @@ const navigation = [
       child: servicesChild,
    },
    { name: "Projets", href: "/projets" },
-   { name: "Contact", href: "/#contact" },
+   // { name: "Contact", href: "#contact" },
 ];
 
 const items = [
