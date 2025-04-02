@@ -56,7 +56,7 @@
                         Projets
                      </ULink>
                   </li>
-                  <li>
+                  <!-- <li>
                      <ULink
                         to="/contact"
                         class="transition-colors hover:text-(--ui-primary)"
@@ -64,7 +64,7 @@
                      >
                         Contact
                      </ULink>
-                  </li>
+                  </li> -->
                </ul>
             </div>
 

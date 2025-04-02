@@ -1,8 +1,8 @@
 <template>
    <UApp>
       <div class="relative min-h-screen">
-         <SpeedInsights />
-         <Analytics />
+         <!-- <SpeedInsights /> -->
+         <!-- <Analytics /> -->
          <MouseMoveEffect />
          <BackgroundEffect />
 
@@ -14,9 +14,6 @@
 </template>
 
 <script setup lang="ts">
-import { SpeedInsights } from "@vercel/speed-insights/nuxt";
-import { Analytics } from "@vercel/analytics/nuxt";
-
 const date = new Date().toISOString();
 
 useHead({

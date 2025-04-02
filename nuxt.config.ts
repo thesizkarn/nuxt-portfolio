@@ -1,6 +1,10 @@
 // nuxt.config.ts
 export default defineNuxtConfig({
    devtools: { enabled: true },
+   nitro: {
+      preset: "vercel",
+   },
+   ssr: false,
    modules: [
       "@nuxt/ui",
       "@nuxt/fonts",

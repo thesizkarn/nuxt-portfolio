@@ -4,6 +4,7 @@
 /* @custom-variant dark (&:is(.dark *)); */
 
 @theme {
+   --font-sans: "Public Sans", sans-serif;
    --color-border: hsl(var(--border));
    --color-input: hsl(var(--input));
    --color-ring: hsl(var(--ring));
@@ -109,15 +110,5 @@
    }
    body {
       @apply bg-background text-foreground;
-      font-family:
-         Public Sans,
-         "Public Sans Fallback: Arial",
-         ui-sans-serif,
-         system-ui,
-         sans-serif,
-         Apple Color Emoji,
-         Segoe UI Emoji,
-         Segoe UI Symbol,
-         Noto Color Emoji;
    }
 }
