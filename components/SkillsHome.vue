@@ -12,6 +12,7 @@
                   :img-attrs="{
                      class: 'object-cover size-full rounded-lg',
                   }"
+                  loading="lazy"
                />
                <div
                   class="grid grid-cols-3 gap-12 text-center select-none md:gap-16"

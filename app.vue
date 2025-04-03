@@ -3,7 +3,7 @@
       <div class="relative min-h-screen">
          <!-- <SpeedInsights /> -->
          <!-- <Analytics /> -->
-         <MouseMoveEffect />
+         <!-- <MouseMoveEffect /> -->
          <BackgroundEffect />
 
          <NuxtLayout>

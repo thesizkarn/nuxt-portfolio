@@ -12,6 +12,7 @@
                   :img-attrs="{
                      class: 'object-cover size-full rounded-lg',
                   }"
+                  loading="lazy"
                />
             </div>
 
